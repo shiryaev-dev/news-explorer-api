@@ -5,7 +5,7 @@ const createArticleValidator = celebrate({
     keyword: Joi.string().required(),
     title: Joi.string().required(),
     text: Joi.string().required(),
-    date: Joi.date().required(),
+    date: Joi.string().required(),
     source: Joi.string().required(),
     link: Joi.string().required().uri(),
     image: Joi.string().required().uri(),
