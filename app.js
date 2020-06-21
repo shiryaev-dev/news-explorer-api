@@ -11,15 +11,15 @@ const { PORT, MONGO_URI } = require('./config');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/error-handler');
 
-// const corsOptions = {
-//   origin: 'http://localhost:8080',
-//   credentials: true,
-// };
+const corsOptions = {
+  origin: 'http://localhost:8080',
+  credentials: true,
+};
 const app = express();
 
 app.use(rateLimit);
 app.use(helmet());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
