@@ -28,8 +28,8 @@ module.exports.login = (req, res, next) => {
       );
       res.cookie('jwt', token, {
         maxAge: 3600000 * 24 * 7,
+        domain: '',
         httpOnly: true,
-        sameSite: true,
       }).send({ message: userLoginSuccessMessage });
     })
     .catch(next);

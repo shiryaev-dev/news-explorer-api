@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
 const rateLimit = require('./middlewares/rate-limiter');
@@ -10,10 +11,15 @@ const { PORT, MONGO_URI } = require('./config');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/error-handler');
 
+// const corsOptions = {
+//   origin: 'http://localhost:8080',
+//   credentials: true,
+// };
 const app = express();
 
 app.use(rateLimit);
 app.use(helmet());
+app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
