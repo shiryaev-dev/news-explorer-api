@@ -12,7 +12,10 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/error-handler');
 
 const corsOptions = {
-  origin: 'http://localhost:8080',
+  origin: [
+    'http://localhost:8080',
+    'https://slam235.github.io/',
+  ],
   credentials: true,
 };
 const app = express();
