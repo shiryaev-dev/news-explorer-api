@@ -18,6 +18,8 @@ const corsOptions = {
     'https://www.slam235.github.io',
     'https://www.newsexplorer.ml',
     'https://newsexplorer.ml',
+    'http://www.newsexplorer.ml',
+    'http://newsexplorer.ml',
   ],
   credentials: true,
 };
