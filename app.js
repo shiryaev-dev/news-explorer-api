@@ -14,10 +14,10 @@ const errorHandler = require('./middlewares/error-handler');
 const corsOptions = {
   origin: [
     'http://localhost:8080',
-    'https://slam235.github.io/',
-    'https://www.slam235.github.io/',
-    'https://www.newsexplorer.ml/',
-    'https://newsexplorer.ml/',
+    'https://slam235.github.io',
+    'https://www.slam235.github.io',
+    'https://www.newsexplorer.ml',
+    'https://newsexplorer.ml',
   ],
   credentials: true,
 };
